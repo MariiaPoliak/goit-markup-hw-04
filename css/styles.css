@@ -196,7 +196,11 @@ height: 112px;
 background: #f4f4fd;
 margin-bottom: 8px;
 }
-
+.feature-icon{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
 .features{
     display: flex;
     gap: 24px;
