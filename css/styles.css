@@ -271,6 +271,7 @@ margin-bottom: 72px;
     display: flex;
     gap: 24px;
     justify-content: center;
+    align-items: center;
     
 }
 .team-links{
@@ -282,7 +283,6 @@ margin-bottom: 72px;
     align-items: center; 
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
     padding: 12px;
 
 
@@ -314,6 +314,7 @@ text-align: center;
 .icon-team{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 24px; 
     width: 232px;
     height: 40px;
@@ -321,13 +322,14 @@ text-align: center;
     padding-left: 16px;
     padding-bottom: 32px;
     padding-right: 16px;
-    justify-content: center;
+    margin: 0 auto;
+   
 }
 .vector{
     height: 40px;
     width: 40px;
 }
-.team-links:hover,.vector:focus
+.team-links:hover, .vector:focus
 {
    background-color: #404bbf;;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -367,9 +369,14 @@ margin-bottom: 72px;
 }
 .port-item{
     width: calc((100% - 48px) / 3);
+    
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.port-picture{
     position: relative;
     overflow: hidden;
-
 }
 .port-item:hover{
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -377,7 +384,9 @@ background: #fff;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+.portfolio-text:hover{
+    transform: translateY(0%);
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -389,7 +398,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    transform: translateY(-100%);
+    transform: translateY(100%);
     transition: transform 250ms ease-in-out;
     width: 360px;
     height: 300px;
@@ -657,7 +666,7 @@ gap: 16px;
     height: 40px;
     padding: 12px;
 }
-.footer-links:hover,.footer-links:focus{
+.footer-links:hover, .footer-links:focus{
     background-color: #31d0aa;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
