@@ -79,6 +79,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .link:focus,
 .link:hover{
     color:#404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .current{
@@ -119,6 +120,7 @@ bottom: -1px;
 .contacts .contacts-link:hover,
 .contacts .contacts-link:focus{
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Body */
@@ -164,12 +166,18 @@ border: none;
 border-radius: 4px;
 margin: 0 auto;
 align-items: center;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+background: #4d5ae5;
+
 
 
 }
 .button:hover,
 .button:focus{
     background-color: #404BBF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
  
 /* Features */
@@ -195,12 +203,12 @@ width: 264px;
 height: 112px;
 background: #f4f4fd;
 margin-bottom: 8px;
+display: flex; 
+align-items: center; 
+justify-content: center;
 }
-.feature-icon{
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-}
+
+
 .features{
     display: flex;
     gap: 24px;
@@ -283,6 +291,36 @@ color: #434455;
 text-align: center; 
 
 }
+
+.icon-team{
+    display: flex;
+   
+    flex-direction: row;
+    gap: 24px; 
+    width: 232px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-bottom: 32px;
+    padding-right: 16px;
+}
+
+.vector{
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    width: 40px; 
+    height: 40px;
+    padding: 12px;
+}
+.vector:hover,.vector:focus
+{
+    background-color: #31d0aa;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-icon{
+    fill: #f4f4fd;
+}
+
 /* Portfolio */
 .portfolio-section{
     padding-top: 120px; 
@@ -316,6 +354,12 @@ margin-bottom: 72px;
     width: calc((100% - 48px) / 3);
     position: relative;
     overflow: hidden;
+
+}
+.port-item:hover{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+background: #fff;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -330,7 +374,7 @@ margin-bottom: 72px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     transition: transform 250ms ease-in-out;
     width: 360px;
     height: 300px;
@@ -342,7 +386,8 @@ margin-bottom: 72px;
   }
   
   .port-item:hover .overlay {
-    transform: translateX(0);
+    transform: translateY(0);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
   }
@@ -361,44 +406,16 @@ letter-spacing: 0.02em;
 color: #434455;
 }
 
-/* Footer */
 
-.footer{
-    background: #2e2f42;
-    padding: 100px 0;
-}
 
-.footer-logo{
-font-family: "Raleway", sans-serif;
-font-weight: 700;
-font-size: 18px;
-line-height: 1.17;
-letter-spacing: 0.03em;
-color: #4d5ae5;
-text-transform: uppercase;
-}
 
-.footer-text-logo{
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: #f4f4fd;
-    text-transform: uppercase;
-}
-.footer-text{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #f4f4fd;
 
-}
-.contacts .contacts-link:focus{
-    color: #404bbf;
-}
+
+
+
+
+
+
 
 /* Body */
 
@@ -425,6 +442,7 @@ cursor: pointer;
 .button:hover,
 .button:focus{
     background-color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 /* Features */
@@ -529,11 +547,22 @@ color: #434455;
     margin: 0 auto;
 
 }
-
-
 .footer{
     background: #2e2f42;
+    padding: 100px 0;
+    max-width: 1440px;
+    align-items: center;
+    margin: 0 auto;
+   
 }
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+
+
+
+
 
 .footer-logo{
 font-family: "Raleway", sans-serif;
@@ -556,6 +585,7 @@ margin-bottom: 16px;
     color: #f4f4fd;
     text-transform: uppercase;
 }
+
 .footer-text{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -565,4 +595,33 @@ letter-spacing: 0.02em;
 color: #f4f4fd;
 width: 264px;
 
+}
+.footer-social{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    padding-bottom: 16px;
+  
+    
+}
+.social-container{
+   display: block;
+   margin-left: 120px;
+   width: 208px;
+   height: 80px;
+
+
+}
+
+.icon-footer{
+    display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: row;
+gap: 16px;
+    width: 208px;
+    height: 40px;
+  
 }
